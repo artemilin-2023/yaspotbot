@@ -1,0 +1,6 @@
+services:
+  yaspotbot:
+    image: ${DOCKER_REGISTRY-}yaspotbot
+    build:
+      context: .
+      dockerfile: YaSpotBot/Dockerfile
