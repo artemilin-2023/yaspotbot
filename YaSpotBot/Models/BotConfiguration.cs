@@ -4,4 +4,7 @@ internal class BotConfiguration
 {
     public required string Token { get; set; }
     public required string[] AllowedUsers { get; set; }
+
+    public string? SpotifyClientId { get; set; }
+    public string? SpotifyClientSecret { get; set; }
 }

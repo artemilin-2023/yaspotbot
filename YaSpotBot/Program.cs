@@ -24,7 +24,8 @@ var botConfig = configuration.Get<BotConfiguration>() ?? throw new InvalidOperat
 
 var services = new ServiceCollection();
 
-services.AddTransient<ISpotifyClientAuthorization, SpotifyClientAuthorization>();
+services.AddSingleton(botConfig);
+services.AddTransient<ISpotifyClientAuthorization, OfficialSpotifyAuth>();
 services.AddTransient<SpotifyClient>();
 services.AddTransient<YandexClient>();
 services.AddTransient<SourceDecector>();

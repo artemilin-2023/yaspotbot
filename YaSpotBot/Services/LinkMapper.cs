@@ -26,7 +26,6 @@ internal class LinkMapper(SourceDecector sourceDecector, SpotifyClient spotifyCl
                 _ => throw new InvalidOperationException("Unsupported source type"),
             });
              
-            await Task.Delay(500, cancellationToken);
             var resultUrl = await (sourceInfo.Type switch
             {
                 SourceType.Spotify => _yandexClient.GetUriAsync(trackInfo, cancellationToken),

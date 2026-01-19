@@ -14,7 +14,7 @@ internal class SpotifyClient(IHttpClientFactory clientFactory, ISpotifyClientAut
 
     private readonly HttpClient _client = clientFactory.CreateClient(ClientName);
     private readonly ISpotifyClientAuthorization _authorization = authorization;
-    private string _token = string.Empty;
+    private static string _token = string.Empty;
 
     public async Task<TrackInfo> GetTrackInfo(string trackId, CancellationToken cancellationToken)
     {
