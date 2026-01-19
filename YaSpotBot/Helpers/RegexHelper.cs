@@ -10,6 +10,6 @@ internal partial class RegexHelper
     [GeneratedRegex(@"open\.spotify\.com/track/(?<id>[a-zA-Z0-9]+)")]
     public static partial Regex SpotifyTrackId();
 
-    [GeneratedRegex(@"music\.yandex\.ru/album/(?<albumId>\d+)/track/(?<trackId>\d+)")]
+    [GeneratedRegex(@"music\.yandex\.(?:ru|com)/album/(?<albumId>\d+)/track/(?<trackId>\d+)")]
     public static partial Regex YandexMusicIds();
 }
